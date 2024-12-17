@@ -1,0 +1,11 @@
+name: device-manager-api
+services:
+  device-manager-api:
+    image: mendelgusmao/device-manager-api:development
+    build: .
+    environment:
+      - DEVICEMGR_DSN=/data/device-manager.db
+    volumes:
+      - ./data:/data
+    ports:
+      - "8080:8080"
